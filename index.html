@@ -1,158 +1,136 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Home</title>
+    <title>Yahtzee!</title>
+    <link rel="stylesheet" href="foglioDiStileCustom.css">
 
-    <!-- Inclusione di Bootstrap CSS per utilizzare le classi predefinite -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
-    
-    <!-- Font Awesome per aggiungere icone -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
-    <!-- Foglio di stile personalizzato per modifiche non gestite da Bootstrap -->
-    <link rel="stylesheet" href="src/css/foglioDiStile.css">
 </head>
 <body>
-    <!-- Navbar con Bootstrap -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Portfolio</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">Chi Sono</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills">Competenze</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="projects.html">Progetti</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contatti">Contatti</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
+    <h1 style="text-align: center;">Yahtzee!</h1>
     
+    <div class="container">
+        <div class="AllineaDadi">
+            <div class = cellaDado onclick="blocca_sblocca(this)"></div>
+            <div class = cellaDado onclick="blocca_sblocca(this)"></div>
+            <div class = cellaDado onclick="blocca_sblocca(this)"></div>
+            <div class = cellaDado onclick="blocca_sblocca(this)"></div>
+            <div class = cellaDado onclick="blocca_sblocca(this)"></div>
+        </div>
+         
+    </div><h2 id="starter" style="text-align: center;"></h1>
+    <form action="">
+       <input type="button" value="Lancia i Dadi" onclick="lanciaDadi()" id="bottone" class="button button-initial"></form>
+       
 
-    <!-- Inizio del contenitore principale con Bootstrap -->
-    <div class="container-fluid">
-        <!-- Banner della Home con Bootstrap (bg-primary per sfondo blu e text-white per testo bianco) -->
-        <section id="banner" class="bg-primary text-white text-center py-5">
-            <h1>Benvenuto nel Mio Portfolio</h1>
-            <p class="lead">Esplora i miei lavori e le mie competenze</p>
-        </section>
-
-        <!-- Sezione Chi Sono -->
-        <section id="about" class="py-5">
-            <div class="row">
-                <div class="col-lg-6">
-                    <h2>Chi Sono</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In gravida leo at augue...</p>
-                </div>
-                <div class="col-lg-5">
-                    <img src="src/images/r_sketch.jpg" class="img-fluid" alt="Immagine Chi Sono">
-                </div>
-            </div>
-        </section>
+       
 
 
-        <hr class="custom-line">
- <!-- Sezione Competenze -->
-<section id="skills" class="bg-light py-5">
-
-    <div class="text-center">
-        <h2>Le Mie Competenze</h2>
+  <h3>Tabella Punteggio</h1>
+    <div class="main_container">
+      
+        <table class="tabella" id="tabellone">
+            <tr>
+                <td class="cella"></td>
+                <td class="cellaNomeP1"></td>
+                <td class="cellaNomeP2"></td>
+            </tr>
+            <tr>
+                <td class="cella">Uno</td>
+                <td id="cellasomma1P1" class="celleP1" onclick="sommaUnoP1(this)"></td>
+                <td id="cellasomma1P2" class="celleP2" onclick="sommaUnoP2(this)"></td>
+            </tr>
+            <tr>
+                <td class="cella">Due</td>
+                <td id="cellasomma2P1" class="celleP1" onclick="sommaDueP1(this)"></td>
+                <td id="cellasomma2P2"class="celleP2" onclick="sommaDueP2(this)"></td>
+            </tr>
+            <tr>
+                <td class="cella">Tre</td>
+                <td id="cellasomma3P1" class="celleP1" onclick="sommaTreP1(this)"></td>
+                <td id="cellasomma3P2"class="celleP2" onclick="sommaTreP2(this)"></td>
+            </tr>
+            <tr>
+                <td class="cella">Quattro</td>
+                <td id="cellasomma4P1" class="celleP1" onclick="sommaQuattroP1(this)"></td>
+                <td id="cellasomma4P2"class="celleP2" onclick="sommaQuattroP2(this)"></td>
+            </tr>
+            <tr>
+                <td class="cella">Cinque</td>
+                <td id="cellasomma5P1"class="celleP1" onclick="sommaCinqueP1(this)"></td>
+                <td id="cellasomma5P2"class="celleP2" onclick="sommaCinqueP2(this)"></td>
+            </tr>
+            <tr>
+                <td class="cella">Sei</td>
+                <td id="cellasomma6P1"class="celleP1" onclick="sommaSeiP1(this)"></td>
+                <td id="cellasomma6P2"class="celleP2" onclick="sommaSeiP2(this)"></td>
+            </tr>
+            <tr>
+                <td class="cella" id="sommaTotale" >Somma totale</td>
+                <td class="cella celle2P1"  id="totP1"></td>
+                <td class="cella celle2P2" id="totP2"></td>
+            </tr>
+            <tr>
+                <td class="cella">Bonus</td>
+                <td class="cella celle2P1"  id="cellaBonusP1"></td>
+                <td class="cella celle2P2" id="cellaBonusP2"></td>
+            </tr>
+            <tr>
+                <td class="cella">Coppia</td>
+                <td class="cella celle2P1"  id="cellaCoppieP1" onclick="coppieUnoP1()"> </td>
+                <td class="cella celle2P2" id="cellaCoppieP2" onclick="coppieUnoP2()"></td>
+            </tr>
+            <tr>
+                <td class="cella">Doppia coppia</td>
+                <td class="cella celle2P1" id="cellaDoppieCoppieP1" onclick="doppieCoppieP1()"></td>
+                <td class="cella celle2P2" id="cellaDoppieCoppieP2" onclick="doppieCoppieP2()"></td>
+            </tr>
+            <tr>
+                <td class="cella">Tris</td>
+                <td class="cella celle2P1"  id="cellaTrisP1" onclick="trisP1()"></td>
+                <td class="cella celle2P2" id="cellaTrisP2" onclick="trisP2()"></td>
+            </tr>
+            <tr>
+                <td class="cella">4 uguali</td>
+                <td class="cella celle2P1"  id="cellaQuadrisP1" onclick="quadrisP1()"></td>
+                <td class="cella celle2P2" id="cellaQuadrisP2" onclick="quadrisP2()"></td>
+            </tr>
+            <tr>
+                <td class="cella">Piccola Scala</td>
+                <td class="cella celle2P1"  id="cellaPiccolaScalaP1" onclick="piccolaScalaP1()"></td>
+                <td class="cella celle2P2" id="cellaPiccolaScalaP2" onclick="piccolaScalaP2()"></td>
+            </tr>
+            <tr>
+                <td class="cella">Grande scala</td>
+                <td class="cella celle2P1"  id="cellaGrandeScalaP1" onclick="grandeScalaP1()"></td>
+                <td class="cella celle2P2" id="cellaGrandeScalaP2" onclick="grandeScalaP2()"></td>
+            </tr>
+            <tr>
+                <td class="cella">Full</td>
+                <td class="cella celle2P1"  id="cellaFullP1" onclick="FullP1()"></td>
+                <td class="cella celle2P2" id="cellaFullP2" onclick="FullP2()"></td>
+            </tr>
+            <tr>
+                <td class="cella">Chance</td>
+                <td class="cella celle2P1"  id="cellaChanceP1" onclick="ChancheP1()"></td>
+                <td class="cella celle2P2" id="cellaChanceP2" onclick="ChancheP2()"></td>
+            </tr>
+            <tr>
+                <td class="cella">Yahtzee</td>
+                <td class="cella celle2P1"  id="cellaYahtzeeP1" onclick="yahtzeeP1()"></td>
+                <td class="cella celle2P2" id="cellaYahtzeeP2" onclick="yahtzeeP2()"></td>
+            </tr>
+            <tr>
+                <td class="cella" id="tot">Totale</td>
+                <td class="cella"  id="totSuperFinaleP1"></td>
+                <td class="cella" id="totSuperFinaleP2"></td>
+            </tr>
+        </table>
     </div>
-    <br>
-    <div class="row text-center">
-        <div class="col-lg-4 col-md-6 mb-4">
-            <i class="fas fa-code fa-3x text-primary mb-3"></i>
-            <h3>Programmazione</h3>
-            <p>Lorem ipsum dolor sit amet...</p>
-        </div>
-        <div class="col-lg-4 col-md-6 mb-4">
-            <i class="fas fa-pencil-ruler fa-3x text-primary mb-3"></i>
-            <h3>Design Grafico</h3>
-            <p>Lorem ipsum dolor sit amet...</p>
-        </div>
-        <div class="col-lg-4 col-md-12 mb-4">
-            <i class="fa-solid fa-gamepad fa-3x text-primary mb-3"></i>
-            <h3>Sviluppo Gaming</h3>
-            <p>Lorem ipsum dolor sit amet...</p>
-        </div>
-    </div>
-
-    <!-- Menu a tendina per le Competenze Aggiuntive -->
-<details class="espansioneSkills">
-    <summary>Espandi per vedere altre competenze</summary>
-    <br>
-    <div class="row text-center">
-        <div class="col-lg-4 col-md-6 mb-4">
-            <h3><i class="fas fa-cube text-primary"></i> <a href="projects.html#modellazione">Modellazione 3D</a></h3>
-            <p>Realizzazione di modelli tridimensionali per giochi e media interattivi.</p>
-        </div>
-        <div class="col-lg-4 col-md-6 mb-4">
-            <h3><i class="fas fa-wave-square text-primary"></i> <a href="projects.html#editing-audio">Editing Audio</a></h3>
-            <p>Elaborazione audio per giochi e contenuti multimediali.</p>
-        </div>
-        <div class="col-lg-4 col-md-6 mb-4">
-            <h3><i class="fas fa-film text-primary"></i> <a href="projects.html#animazione">Animazione</a></h3>
-            <p>Creazione di animazioni per giochi e media digitali.</p>
-        </div>
-    </div>
-</details>
 
 
-<hr class="custom-line">
-
-
-        <!-- Sezione Contatti -->
-        <section id="contatti" class="py-5">
-            <div class="text-center">
-                <h2>Contattami</h2>
-                <p>Per qualsiasi informazione, puoi contattarmi qui:</p>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <form>
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Nome</label>
-                            <input type="text" class="form-control" id="name" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="message" class="form-label">Messaggio</label>
-                            <textarea class="form-control" id="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Invia</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer con Bootstrap -->
-        <footer class="bg-dark text-white text-center py-3">
-            <p>Il Mio Portfolio &copy; 2024</p>
-        </footer>
-    </div>
-
-    <!-- Inclusione di Bootstrap JS e Popper.js -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Script personalizzato -->
-    <script src="src/js/script.js"></script>
 </body>
+<script src="scriptCustom.js"></script>
 </html>
