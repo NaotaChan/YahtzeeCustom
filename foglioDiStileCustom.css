@@ -1,0 +1,217 @@
+@font-face {
+    font-family: 'RavenHellBold';
+    src: url('font/RavenHell-BoldGothic.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+    font-family: 'RavenHell';
+    src: url('font/RavenHell-RegularGothic.otf') format('opentype');
+    font-style: normal;
+}
+
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    background-image: url("goth.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+}
+
+
+
+.AllineaDadi{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Dado{
+   
+    border: 2px black solid;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    font-size: 50px;
+    text-align: center;
+    
+    background-color: white;
+
+}
+
+#starter{
+    color: white;
+
+}
+
+
+.tabella{
+    border: 2px black solid;
+    border-collapse: collapse;
+    background-color: grey;
+
+}
+
+.cella{
+    border: 1px black solid;
+    border-collapse: collapse;
+}
+
+.cellaDado{
+    --glow-color: rgb(233, 197, 255);
+    --glow-spread-color: rgba(223, 160, 255, 0.781);
+    --enhanced-glow-color: rgb(173, 76, 215);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px; /* Width of the element */
+    height: 100px; /* Height of the element */
+    border: 5px solid #333; /* Border width and color */
+    margin: 10px; /* Margin around the element */
+    text-align: center; /* Text alignment within the element */
+    font-size: 60px; /* Font size of the text inside the element */
+    color: #333; /* Text color */
+    background-color: #fff; /* Background color of the element */
+    cursor: pointer; /* Cursor appearance on hover */
+    border-radius: 25px; /* Border radius for rounded corners */
+    box-shadow: 
+        0 0 10px rgba(0, 0, 0, 0.3), /* External shadow */
+        0 0 10px 5px var(--glow-color), /* Moderately reduced glow effect around the element */
+        0 0 25px 8px var(--glow-spread-color), /* Moderately reduced spread glow effect */
+        inset 0 0 15px 5px var(--enhanced-glow-color); /* Moderately reduced inner glow effect */
+}
+
+
+.cellaNomeP1{
+    border: 1px black solid;
+    border-collapse: collapse;
+    background-color: darkblue;
+    color:white;
+    text-align: center;
+    width: auto;
+    padding: 5px;
+}
+
+.cellaNomeP2{
+    border: 1px black solid;
+    border-collapse: collapse;
+    background-color: darkred;
+    color:white;
+    text-align: center;
+    width: auto;
+    padding: 5px;
+
+}
+
+.celleP1{
+    border: 1px black solid;
+    border-collapse: collapse;
+}
+
+.celleP2{
+    border: 1px black solid;
+    border-collapse: collapse;
+}
+
+
+#tot{
+    background-color:rgb(73, 0, 141);
+    color: white; 
+}
+
+#sommaTotale{
+    background-color: rgb(139, 67, 206);
+    color: white;
+}
+
+#totP1{
+    background-color: rgb(139, 67, 206);
+    color: white;
+}
+
+#totP2{
+    background-color: rgb(139, 67, 206);
+    color: white;
+}
+
+#totSuperFinaleP1{
+    background-color: rgb(73, 0, 141);
+    color: white;
+}
+
+#totSuperFinaleP2{
+    background-color: rgb(73, 0, 141);
+    color: white;
+}
+
+
+.main_container{
+   display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+h3{
+    text-align: center;
+    color: white;
+
+}
+
+#bottone{
+    margin: 30px;
+}
+
+.button-initial {
+    --glow-color: rgb(215, 215, 250);
+
+    --glow-spread-color: rgba(127, 123, 255, 0.781);
+    --enhanced-glow-color: rgb(208, 206, 255);
+    --btn-color: rgb(67, 61, 136);
+    border: .25em solid var(--glow-color);
+    padding: 1em 3em;
+    color: var(--glow-color);
+    font-size: 15px;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    border-radius: 1em;
+    outline: none;
+    box-shadow: 0 0 1em .25em var(--glow-color),
+    0 0 4em 1em var(--glow-spread-color),
+    inset 0 0 .75em .25em var(--glow-color);
+    text-shadow: 0 0 .5em var(--glow-color);
+    position: relative;
+    transition: all 0.3s;
+    font-family: 'RavenHell', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+   .button-disabled {
+    background-color: grey;
+    color: rgb(174, 174, 174);
+    padding: 0.9em 2.8em;
+    box-shadow: 0 0 0 0;
+    text-shadow: 0 0 0 0;
+    border: .25em solid black;
+    border-radius: 1em;
+    transition: all 0.3s;
+    font-family: 'RavenHell', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1, h2, h3 {
+    color: white;
+    font-family: 'RavenHell', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1{
+    text-shadow: 5px 3px 5px #8400ff;
+}
